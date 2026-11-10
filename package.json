@@ -1,0 +1,1 @@
+{"name":"tarot-llm-wiki-slides","version":"1.0.0","private":true,"type":"module","scripts":{"ingest":"node scripts/ingest.mjs","query":"node scripts/query.mjs","build":"node scripts/build.mjs","check":"node scripts/check.mjs","start":"node scripts/server.mjs"},"engines":{"node":">=18"}}

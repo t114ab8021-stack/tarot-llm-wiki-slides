@@ -1,0 +1,41 @@
+{
+  "executedAt": "2026-11-10T10:38:18.670Z",
+  "method": "來源正文由本次 web reader 實際取得，LLM 整理成筆記；此腳本驗證並 ingest 筆記，不宣稱再次下載網頁。",
+  "results": [
+    {
+      "id": "S01",
+      "status": "ingested",
+      "note": "wiki/sources/S01.md",
+      "noteSha256": "24d2b17c6bd2b003781eb8eb29bb492173014b7b6b0797295ec6a4fcaea8378f"
+    },
+    {
+      "id": "S02",
+      "status": "ingested",
+      "note": "wiki/sources/S02.md",
+      "noteSha256": "66c39abcb8eda7d80a30955a28930a9ac7a1026f8814211913f02d54dd29ca6e"
+    },
+    {
+      "id": "S03",
+      "status": "ingested",
+      "note": "wiki/sources/S03.md",
+      "noteSha256": "81bfdd2e97acff1001e41bc66f961452d8baa5696d72065ae00dd970a34027f4"
+    },
+    {
+      "id": "S04",
+      "status": "ingested",
+      "note": "wiki/sources/S04.md",
+      "noteSha256": "9258dba465e4a5dbdc368b0d7561345704475b0d26b92240aa96cd6c5723a1b6"
+    },
+    {
+      "id": "S05",
+      "status": "ingested",
+      "note": "wiki/sources/S05.md",
+      "noteSha256": "c3c95f7f885f0488697b567368c60bd608d6a6a2519f4dd418d390928754f880"
+    },
+    {
+      "id": "R01",
+      "status": "rejected",
+      "reason": "沒有取得正文，不進入知識頁或簡報的證據鏈。"
+    }
+  ]
+}

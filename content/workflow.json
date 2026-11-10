@@ -1,0 +1,33 @@
+{
+ "version":"v2",
+ "execution":"LLM 輔助、人工可核對的檔案式 workflow；不是自動呼叫 LLM API 的代理系統。",
+ "nodes":[
+  {"id":"N1","name":"討論與定義範圍","input":"作業要求、主題選項","output":"DISCUSSION.md","check":"使用者確認沿用塔羅入門主題","retry":"目標不清楚時回到討論"},
+  {"id":"N2","name":"取得資料","input":"機構文章網址","output":"來源標題、正文閱讀結果","check":"實際開啟原頁，不只讀搜尋摘要","retry":"沒有正文時更換可讀來源"},
+  {"id":"N3","name":"來源閘門與 ingest","input":"閱讀結果、來源筆記","output":"wiki/sources、ingest.json","check":"正文可讀、來源可追溯、至少五篇 accepted","retry":"未通過回 N2，不摘要載入頁"},
+  {"id":"N4","name":"主張核對與建 Wiki","input":"accepted 筆記","output":"claims.json、wiki/topics","check":"區分史實、方法、自編練習；核對數量、時間層次","retry":"證據不足刪除主張，必要時回 N2"},
+  {"id":"N5","name":"查詢 Wiki","input":"教學問題與關鍵詞","output":"retrieval.json","check":"找到相關 Wiki 頁及主張 ID","retry":"沒有結果時改查詢或補 Wiki"},
+  {"id":"N6","name":"編排簡報","input":"檢索結果與核對主張","output":"slides.json","check":"每頁一個目的，fact 引用可追到來源","retry":"無依據回 N4；太難則重寫本節點"},
+  {"id":"N7","name":"建置與瀏覽檢查","input":"Wiki、簡報內容、版型","output":"HTML、checks.json、browser.json","check":"引用、內部連結、圖片、導覽及不同尺寸","retry":"版面問題回 N6／樣式，重新檢查受影響頁"},
+  {"id":"N8","name":"發布與反思","input":"通過檢查的成果","output":"公開網址、執行紀錄與反思","check":"正式網址能讀取且是新專案","retry":"發布失敗查部署紀錄，不宣稱已完成"}
+ ],
+ "changes":[
+  {"before":"搜尋 → 摘要 → Wiki → 簡報 → 最後檢查","after":"搜尋 → 讀正文／來源閘門 → 摘要 → 主張核對 → Wiki → 簡報 → 瀏覽檢查","why":"MIT 候選頁只顯示載入提示，搜尋結果看似相關卻不足以 ingest。先驗證正文可避免把空頁當成知識。"},
+  {"before":"將不同來源的年份直接濃縮成一個年代","after":"在主張核對節點分開『用途出現』與『用途普及』","why":"Folger／V&A 的十八世紀後期與 Met 的十九世紀敘述粒度不同；先釐清語意再產生時間線。"}
+ ],
+ "findings":[
+  {"id":"F01","node":"N2→N3","severity":"rejected","source":"R01","observed":"讀取結果僅有 JavaScript 與 Loading 提示。","action":"不 ingest；以 S05 補足第五篇正文來源。","status":"resolved"},
+  {"id":"F02","node":"N4","severity":"review","source":"S01/S02/S03","observed":"占卜用途的『開始』與『普及』對應不同世紀。","action":"C05 分開兩個階段，避免把細節差異誤判為矛盾。","status":"resolved"},
+  {"id":"F03","node":"N4","severity":"excluded-claim","source":"S02","observed":"文章有『第一套完整小牌插圖』的絕對敘述。","action":"本次未廣泛核對早期牌組；簡報只採用出版年份與繪者。","status":"resolved"},
+  {"id":"F04","node":"N4","severity":"excluded-claim","source":"S05","observed":"文中引用塔羅直接演變成撲克牌、愚者變 Joker 的系譜說法。","action":"沒有足夠交叉證據，不將此說法寫入 Wiki 的可用主張。","status":"resolved"},
+  {"id":"F05","node":"N6 素材準備","severity":"execution-error","source":"本機素材清單","observed":"PowerShell 傳給 Node stdin 的中文路徑被轉為問號，產生 ENOENT。","action":"改讀既有 ASCII 路徑來源清單；核對三張圖片雜湊。這是工程編碼問題，不是來源內容錯誤。","status":"resolved"},
+  {"id":"F06","node":"N7","severity":"layout-error","source":"runs/browser-first-failure.json","observed":"第一輪桌機測試第 1 頁捲動高度 775 px，大於可用容器 769 px。","action":"移除與留白重複計算的 min-height，使用 flex 空間分配；重測 14 頁 × 4 種尺寸通過。","status":"resolved"},
+  {"id":"F07","node":"N6 素材準備","severity":"execution-error","source":"錢幣八來源網址","observed":"補查圖片時誤用 Pentacles08.jpg，來源工具無法開啟；既有清單實際記錄 Pents08.jpg。","action":"回讀 assets.json 的原始網址，不從英文牌名猜檔名；三張 Commons 圖片來源頁皆已核對公有領域標示。","status":"resolved"}
+ ],
+ "reflection":{
+  "mostErrors":"以本次記錄的不同失敗事件計，N6 素材準備最多，共 2 項：中文路徑編碼與誤猜圖片網址。N2／N3 的正文取得、N7 的桌機版面各 1 項。N4 另有 3 項內容風險，沒有混算成故障；這不是長期失敗率統計。",
+  "movedCheck":"把『正文是否真的可讀』移到摘要與 ingest 前；把時間層次與絕對語句核對移到建 Wiki 前。素材先讀來源清單並確認路徑，不猜網址；版面先檢查首張共用版型高度，再做全套尺寸驗證。",
+  "changed":"有修改 graph。v2 加入 N3 來源閘門，並明確化 N4 主張核對；來源失敗回 N2，內容不足回 N4／N2，版面失敗只重建相關投影片。",
+  "reason":"越早攔下空頁與過度概括，越不容易讓錯誤同時出現在 Wiki、投影片與講者筆記，也能減少整份重做。"
+ }
+}

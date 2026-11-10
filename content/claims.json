@@ -1,0 +1,14 @@
+[
+ {"id":"C01","kind":"fact","text":"可核對的早期塔羅資料集中於十五世紀北義大利，當時用於紙牌遊戲。","sources":["S01","S03"]},
+ {"id":"C02","kind":"fact","text":"本課採用常見的 78 張結構：22 張大牌，加上 56 張小牌。","sources":["S01","S02","S03"]},
+ {"id":"C03","kind":"fact","text":"56 張小牌分四花色；每花色有 Ace 至 10 共十張，另有四張宮廷牌。","sources":["S01","S05"]},
+ {"id":"C04","kind":"fact","text":"宮廷牌為侍者、騎士、皇后、國王；四花色為權杖、聖杯、寶劍、錢幣。","sources":["S01","S05"]},
+ {"id":"C05","kind":"fact","text":"占卜用途在十八世紀後期出現，十九世紀進一步流行；出現與普及是不同時間層次。","sources":["S01","S02","S03"]},
+ {"id":"C06","kind":"fact","text":"Rider–Waite–Smith 牌組於 1909 年出版，其圖像出自 Pamela Colman Smith。","sources":["S02"]},
+ {"id":"C07","kind":"fact","text":"牌組的圖像與安排會隨年代、地區和版本而改變。","sources":["S03"]},
+ {"id":"C08","kind":"method","text":"Project Zero 的 See, Think, Wonder 鼓勵先觀察，再以可見證據支持解釋，最後提出疑問。","sources":["S04"]},
+ {"id":"C09","kind":"original","text":"本課把塔羅當作圖像觀察與自我書寫素材，不用牌面保證未來事件。","sources":[]},
+ {"id":"C10","kind":"observation","text":"本課使用的聖杯二圖像中，兩個人物相對站立，各自拿著杯子。這是畫面觀察；關係是否和諧是另一層解讀。","sources":[],"asset":"cups_02.jpg"},
+ {"id":"C11","kind":"original","text":"先記錄看得見的細節，再提出一種可能解釋，最後寫一個可以進一步了解的問題。","sources":[]},
+ {"id":"C12","kind":"original","text":"把『我一定會成功嗎？』改成『我目前有什麼資源，還需要確認什麼？』是本課自編的反思練習。","sources":[]}
+]

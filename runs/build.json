@@ -1,0 +1,9 @@
+{
+  "executedAt": "2026-11-10T10:42:00.312Z",
+  "status": "passed",
+  "wikiPages": 5,
+  "acceptedSources": 5,
+  "slides": 14,
+  "claimCount": 12,
+  "sourceChain": "slide → wiki → claim → accepted source"
+}

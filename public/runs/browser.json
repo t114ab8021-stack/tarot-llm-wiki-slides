@@ -1,0 +1,49 @@
+{
+  "executedAt": "2026-11-10T10:38:25.521Z",
+  "status": "passed",
+  "browser": "Chromium / Microsoft Edge headless",
+  "results": [
+    {
+      "test": "All 14 slides render, images loaded, no horizontal overflow; desktop fits",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "status": "passed"
+    },
+    {
+      "test": "All 14 slides render, images loaded, no horizontal overflow; desktop fits",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "status": "passed"
+    },
+    {
+      "test": "All 14 slides render, images loaded, no horizontal overflow; desktop fits",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": "passed"
+    },
+    {
+      "test": "All 14 slides render, images loaded, no horizontal overflow; desktop fits",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "status": "passed"
+    },
+    {
+      "test": "Keyboard, reveal, both quizzes, note persistence, timer, notes and print visibility",
+      "status": "passed"
+    },
+    {
+      "test": "Wiki search, empty state and public site routes",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "limits": "自動化瀏覽器測試；不是手機實機觸控測試。列印只驗證 14 頁內容可見，未驗證實體紙張輸出。"
+}

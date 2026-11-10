@@ -1,0 +1,41 @@
+{
+  "executedAt": "2026-11-10T10:41:59.816Z",
+  "status": "passed",
+  "checks": [
+    {
+      "name": "Five ingested source notes",
+      "status": "passed"
+    },
+    {
+      "name": "Source note hashes match ingest record",
+      "status": "passed"
+    },
+    {
+      "name": "Unique IDs",
+      "status": "passed"
+    },
+    {
+      "name": "Factual claims cite accepted sources",
+      "status": "passed"
+    },
+    {
+      "name": "Every slide claim is contained in its Wiki pages",
+      "status": "passed"
+    },
+    {
+      "name": "Image provenance hashes",
+      "status": "passed"
+    },
+    {
+      "name": "16 HTML pages and 240 internal links/assets",
+      "status": "passed"
+    },
+    {
+      "name": "Browser JavaScript syntax",
+      "status": "passed"
+    }
+  ],
+  "htmlCount": 16,
+  "links": 240,
+  "scope": "結構、檔案與引用鏈檢查；不會自動判定史實真偽，內容已在主張核對階段審閱。"
+}

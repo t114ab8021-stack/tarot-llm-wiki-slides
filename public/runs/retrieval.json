@@ -1,0 +1,79 @@
+[
+  {
+    "executedAt": "2026-11-10T10:30:01.627Z",
+    "query": "歷史 年代",
+    "method": "Wiki 關鍵詞檢索；不是向量搜尋或 LLM API",
+    "results": [
+      {
+        "id": "W01",
+        "title": "塔羅的歷史與用途",
+        "score": 2,
+        "claims": [
+          "C01",
+          "C05"
+        ]
+      }
+    ]
+  },
+  {
+    "executedAt": "2026-11-10T10:30:02.122Z",
+    "query": "結構 花色 宮廷",
+    "method": "Wiki 關鍵詞檢索；不是向量搜尋或 LLM API",
+    "results": [
+      {
+        "id": "W02",
+        "title": "78 張牌的結構",
+        "score": 3,
+        "claims": [
+          "C02",
+          "C03",
+          "C04",
+          "C07"
+        ]
+      }
+    ]
+  },
+  {
+    "executedAt": "2026-11-10T10:30:02.614Z",
+    "query": "RWS 繪者",
+    "method": "Wiki 關鍵詞檢索；不是向量搜尋或 LLM API",
+    "results": [
+      {
+        "id": "W03",
+        "title": "RWS 與圖像版本",
+        "score": 2,
+        "claims": [
+          "C06",
+          "C07"
+        ]
+      }
+    ]
+  },
+  {
+    "executedAt": "2026-11-10T10:30:03.319Z",
+    "query": "觀察 提問 練習",
+    "method": "Wiki 關鍵詞檢索；不是向量搜尋或 LLM API",
+    "results": [
+      {
+        "id": "W04",
+        "title": "觀察、解釋與提問",
+        "score": 2,
+        "claims": [
+          "C08",
+          "C10",
+          "C11"
+        ]
+      },
+      {
+        "id": "W05",
+        "title": "一張牌的書寫練習",
+        "score": 1,
+        "claims": [
+          "C09",
+          "C11",
+          "C12"
+        ]
+      }
+    ]
+  }
+]

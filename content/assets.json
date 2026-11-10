@@ -1,0 +1,29 @@
+[
+  {
+    "id": "pentacles_08",
+    "file": "pentacles_08.jpg",
+    "artist": "Pamela Colman Smith",
+    "series": "Rider-Waite-Smith Pam-A",
+    "source": "https://commons.wikimedia.org/wiki/File:Pents08.jpg",
+    "sha256": "13c82cbdec9ce101f157ee502663eb38bbd8117cec5e019b8400474056caebd9",
+    "note": "Existing workspace scan. Original Commons description and Public Domain Mark verified on 2026-11-10."
+  },
+  {
+    "id": "cups_02",
+    "file": "cups_02.jpg",
+    "artist": "Pamela Colman Smith",
+    "series": "Rider-Waite-Smith Pam-A",
+    "source": "https://commons.wikimedia.org/wiki/File:Cups02.jpg",
+    "sha256": "5d1f09a9b69784e6006a9b662496f0664b26b15740062ac2285e77eadf3b36e4",
+    "note": "Existing workspace scan. Original Commons description and Public Domain Mark verified on 2026-11-10."
+  },
+  {
+    "id": "swords_03",
+    "file": "swords_03.jpg",
+    "artist": "Pamela Colman Smith",
+    "series": "Rider-Waite-Smith Pam-A",
+    "source": "https://commons.wikimedia.org/wiki/File:Swords03.jpg",
+    "sha256": "4fdf7db3e7611561831af32b5c886f9862c7d90a851965cddf71298047da1dee",
+    "note": "Existing workspace scan. Original Commons description and Public Domain Mark verified on 2026-11-10."
+  }
+]
